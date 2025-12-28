@@ -1,0 +1,31 @@
+ Network Layer
+Network layer is responsible fo rsource to destination(end to end) delivery of a packet across multiple network links
+ various functions
+•	Addressing: Maintains the frame header of both source and destination and performs addressing to detect various devices in the network
+•	Packetting:  performed by the internet protocol .The network layer converts the packet form the upper layer.
+•	Routing: This is the important functionality in the network layer.The best shortest path is selected for the transmission of packets from the source to the destination.
+•	Inter-networking: Delivers a logic connection between the devices connected in the network
+
+Network layer Design issues
+1.	Store and Forward packet switching
+2.	Service provided to Transport Layer
+3.	Implementation of connection less service
+4.	Implementation of connection oriented service
+
+Store and Forward Packet Switching
+	Host sends the packet to the nearest router
+	the packets are stored until it is fully arrived,which is verified by the checksum and is forwarded to the next router and the process is repated until it reaches the destination.
+
+ 
+
+
+
+
+
+Service Provided to Transport layer
+The network layer provides the service to the transport layer in the  network/transport layer interface.
+
+The following points must be considered while providing the service on transport layer
+	The  transport layer must be independent of the exixting technology or the router technology alone
+	Transport layer needs to be protected from the type,topology and number of the available router
+	The network address for the transport layer must use uniform number patter ens also at the  lan and wan

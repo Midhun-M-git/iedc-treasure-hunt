@@ -1,0 +1,41 @@
+// Prisma schema for Treasure Hunt
+generator client {
+	provider = "prisma-client-js"
+}
+
+datasource db {
+	provider = "sqlite"
+	url      = "file:./dev.db"
+}
+
+model Team {
+	id        Int      @id @default(autoincrement())
+	name      String
+	loginId   String   @unique
+	password  String
+	members   Member[]
+	progress  Progress[]
+	selfies   Selfie[]
+}
+
+model Member {
+	id      Int    @id @default(autoincrement())
+	name    String
+	teamId  Int
+	team    Team   @relation(fields: [teamId], references: [id])
+}
+
+model Progress {
+	id      Int    @id @default(autoincrement())
+	teamId  Int
+	node    String
+	team    Team   @relation(fields: [teamId], references: [id])
+}
+
+model Selfie {
+	id      Int    @id @default(autoincrement())
+	teamId  Int
+	node    String
+	photo   String
+	team    Team   @relation(fields: [teamId], references: [id])
+}

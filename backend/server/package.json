@@ -1,0 +1,16 @@
+{
+	"name": "treasure-hunt-server",
+	"version": "1.0.0",
+	"main": "dist/app.js",
+	"scripts": {
+		"build": "tsc",
+		"start": "node ../server.js"
+	},
+	"dependencies": {
+		"@prisma/client": "^6.15.0",
+		"express": "^5.1.0"
+	},
+	"devDependencies": {
+		"typescript": "^5.0.0"
+	}
+}
